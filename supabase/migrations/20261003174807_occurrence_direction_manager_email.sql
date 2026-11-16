@@ -1,0 +1,10 @@
+begin;
+alter table public.occurrence_direction_managers add column email text;
+update public.occurrence_direction_managers m set email=u.email from auth.users u where u.id=m.user_id;
+alter table public.occurrence_direction_managers alter column email set not null;
+alter table public.occurrence_direction_managers drop constraint occurrence_direction_managers_pkey;
+alter table public.occurrence_direction_managers add primary key (email);
+alter table public.occurrence_direction_managers drop column user_id;
+create or replace function public.app_is_occurrence_manager() returns boolean language sql stable security definer set search_path=public as $$ select exists(select 1 from public.occurrence_direction_managers m join auth.users u on lower(u.email)=lower(m.email) where u.id=(select auth.uid()) and m.active=true); $$;
+notify pgrst,'reload schema';
+commit;

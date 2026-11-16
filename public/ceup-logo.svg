@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">CEUP</title>
+  <desc id="desc">Símbolo formado por quatro triângulos coloridos com as letras C, E, U e P.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="7" flood-color="#071635" flood-opacity=".25"/>
+    </filter>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff3b35"/><stop offset="1" stop-color="#e71f2b"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#25b97c"/><stop offset="1" stop-color="#0e9a61"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#2e94f5"/><stop offset="1" stop-color="#1e79df"/></linearGradient>
+    <linearGradient id="yellow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffd82f"/><stop offset="1" stop-color="#f6bf0c"/></linearGradient>
+  </defs>
+  <g filter="url(#shadow)" stroke="#0c173d" stroke-width="8" stroke-linejoin="round">
+    <path d="M320 34 466 250H174Z" fill="url(#red)"/>
+    <path d="M171 246 320 478H22Z" fill="url(#green)"/>
+    <path d="M469 246 618 478H320Z" fill="url(#blue)"/>
+    <path d="M320 476 469 598H171Z" fill="url(#yellow)"/>
+  </g>
+  <g fill="#0c173d" font-family="Arial, Helvetica, sans-serif" font-weight="900" text-anchor="middle">
+    <text x="320" y="189" font-size="120">C</text>
+    <text x="171" y="411" font-size="110">E</text>
+    <text x="469" y="411" font-size="110">U</text>
+    <text x="320" y="568" font-size="108">P</text>
+  </g>
+</svg>
