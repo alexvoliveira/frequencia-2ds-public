@@ -2,7 +2,7 @@
 
 Sistema web de acompanhamento da frequência escolar, registros de faltas, justificativas, ocorrências, indicadores e relatórios por turma.
 
-Este repositório contém a documentação técnica e funcional do projeto. A documentação descreve a implementação observada no código-fonte de referência, identifica o que depende do Supabase e registra limites conhecidos para instalação, segurança e operação.
+Este repositório contém o código-fonte da aplicação, as migrações SQL versionadas e a documentação técnica e funcional. A implementação foi derivada do projeto de referência com remoção de associações pessoais e de identificadores fixos do ambiente Supabase original.
 
 > **Importante:** este projeto lida com dados pessoais de estudantes e profissionais da educação. A documentação e o código não devem ser interpretados como autorização para publicar dados reais, credenciais, dumps ou informações identificáveis. A instância pública de demonstração deve usar um projeto Supabase separado e dados fictícios ou agregados.
 
@@ -19,6 +19,26 @@ Este repositório contém a documentação técnica e funcional do projeto. A do
 - Mantém histórico de auditoria para operações administrativas.
 - Oferece configurações escolares, tema claro/escuro e opções de acessibilidade visual.
 - Expõe um painel público separado, concebido para mostrar somente indicadores agregados de frequência.
+
+## Executar localmente
+
+1. Instale Node.js 24.x.
+2. Copie .env.example para .env.local.
+3. Configure VITE_SUPABASE_URL e VITE_SUPABASE_PUBLISHABLE_KEY com um projeto Supabase próprio e isolado.
+4. Execute npm ci.
+5. Execute npm run dev.
+
+O frontend necessita de um backend compatível, com schema, RPCs, políticas RLS e dados de configuração. Não conecte este clone a um banco de produção sem revisar autorização, privacidade e compatibilidade. Consulte Instalação e operação para os detalhes.
+
+## Estrutura do código
+
+- src/pages: telas e fluxos da aplicação.
+- src/components: layout, formulários, modais, componentes de interface e gráficos.
+- src/lib: cliente Supabase, fachada de API e utilitários de data.
+- supabase/migrations: alterações SQL versionadas.
+- tests: testes automatizados de contrato/estrutura.
+- public: logos e recursos estáticos.
+- docs: documentação funcional e técnica.
 
 ## Documentação
 
