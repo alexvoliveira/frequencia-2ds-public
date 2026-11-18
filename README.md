@@ -186,4 +186,4 @@ Como o sistema trabalha com informações de estudantes e profissionais da educa
 
 ## Licença
 
-Este repositório não possui um arquivo de licença. Até que uma licença seja incluída pelo responsável, a publicação do código no GitHub não deve ser interpretada como autorização para reutilização, redistribuição ou uso comercial.
+Este projeto é distribuído sob a licença [MIT](LICENSE). Consulte o arquivo `LICENSE` para conhecer os termos completos de uso, modificação e redistribuição.
